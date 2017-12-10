@@ -1,0 +1,147 @@
+import React from 'react';
+import Paper from 'material-ui/Paper';
+import FlatButton from 'material-ui/FlatButton';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+
+const box1Style = {
+  height: 250,
+  width: 290,
+  margin: '60px 20px 20px 80px',
+  textAlign: 'center',
+
+};
+
+const comp1Style = {
+  height: 100,
+  width: '100%',
+  margin: 0,
+  backgroundColor: '#2196F3',
+  textAlign: 'center',
+  display: 'inline-block',
+};
+
+const btnStyle = {
+  textTransform: 'none',
+}
+
+const profileBtnStyle = {
+    margin: '80px 50px -100px 20px',
+    width: '56px',
+    height: '56px',
+    borderRadius: '50%',
+    color: 'white',
+    border: '2px solid',
+    display: 'static'
+}
+
+const listStyle = {
+    tableLayout: 'fixed',
+    boxSizing: 'border-box',
+    display: 'table',
+    margin: 0,
+    marginTop: 20,
+    minWidth: '100%',
+    padding: 0,
+    listStyle: 'none',
+    color: '#14171a',
+    fontSize: '14px',
+    lineHeight: '20px'
+}
+
+const liStyle = {
+  width: '1%',
+  verticalAlign: 'bottom',
+  display: 'table-cell',
+  padding: 0,
+  lineHeight: 1
+}
+
+const liaStyle = {
+  cursor: 'pointer',
+  textDecoration: 'none'
+}
+
+const span1Style = {
+    color: '#657786',
+    fontSize: '12px',
+    fontWeight: 'bold',
+    letterSpacing: '.02em',
+    lineHeight: '16px',
+    overflow: 'hidden',
+}
+
+const span2Style = {
+    display: 'block',
+    fontSize: '16 px',
+    fontWeight: 'bold',
+    paddingTop: '3px',
+    color: '#657786',
+}
+
+const underline = 'underline';
+const none = 'none';
+
+export default class DashBoard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {style: none}
+    this.handleMouseOver = this.handleMouseOver.bind(this);
+    this.handleMouseOut = this.handleMouseOut.bind(this);
+  }
+  handleMouseOver() {
+    this.setState({style: underline});
+  }
+  handleMouseOut() {
+    const newState = this.state.style === none ? underline : none;
+    this.setState({style: newState});
+  }
+  render() {
+    return(
+       <Paper style={box1Style} zDepth={1} >
+         <Paper style={comp1Style} >
+            <FloatingActionButton
+                style={profileBtnStyle}
+                backgroundColor='#2196F3'>
+              <ContentAdd />
+            </FloatingActionButton>
+         </Paper>
+         <a href='#1' id='name'
+            style={{textDecoration: this.state.style, fontSize: '20px',
+                    color: 'black'}}
+            onMouseOver={this.handleMouseOver}
+            onMouseOut={this.handleMouseOut}>
+            Manjusha Z
+         </a>
+         <br/>
+         <a href='#1' id='hashTag'
+            style={{textDecoration: this.state.style,fontSize: '15px',
+                    color: '#607D8B'}}
+            onMouseOver={this.handleMouseOver}
+            onMouseOut={this.handleMouseOut}>
+           @ManjuZM
+         </a>
+          <ul style={listStyle}>
+            <li style={liStyle}>
+               <a href='#2' style={liaStyle}>
+                 <span style={span1Style}>Tweets</span>
+                 <span style={span2Style}>0</span>
+               </a>
+            </li>
+            <li style={liStyle}>
+               <a href='#2' style={liaStyle}>
+                 <span style={span1Style}>Following</span>
+                 <span style={span2Style}>87</span>
+               </a>
+            </li>
+            <li style={liStyle}>
+              <a href='#2' style={liaStyle}>
+                 <span style={span1Style}>Followers</span>
+                 <span style={span2Style}>1</span>
+              </a>
+            </li>
+          </ul>
+       </Paper>
+    )
+  }
+}
