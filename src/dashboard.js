@@ -1,16 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import FlatButton from 'material-ui/FlatButton';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
-
-const box1Style = {
-  height: 250,
-  width: 290,
-  margin: '60px 20px 20px 80px',
-  textAlign: 'center',
-
-};
 
 const comp1Style = {
   height: 100,
@@ -20,10 +11,6 @@ const comp1Style = {
   textAlign: 'center',
   display: 'inline-block',
 };
-
-const btnStyle = {
-  textTransform: 'none',
-}
 
 const profileBtnStyle = {
     margin: '80px 50px -100px 20px',
@@ -98,7 +85,7 @@ export default class DashBoard extends React.Component {
   }
   render() {
     return(
-       <Paper style={box1Style} zDepth={1} >
+       <Paper style={this.props.style} zDepth={1} >
          <Paper style={comp1Style} >
             <FloatingActionButton
                 style={profileBtnStyle}
@@ -111,7 +98,7 @@ export default class DashBoard extends React.Component {
                     color: 'black'}}
             onMouseOver={this.handleMouseOver}
             onMouseOut={this.handleMouseOut}>
-            Manjusha Z
+            {this.props.name}
          </a>
          <br/>
          <a href='#1' id='hashTag'
@@ -119,7 +106,7 @@ export default class DashBoard extends React.Component {
                     color: '#607D8B'}}
             onMouseOver={this.handleMouseOver}
             onMouseOut={this.handleMouseOut}>
-           @ManjuZM
+           {this.props.hashTag}
          </a>
           <ul style={listStyle}>
             <li style={liStyle}>

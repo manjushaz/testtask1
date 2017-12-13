@@ -16,16 +16,6 @@ const imageSupervisorAccount = <ActionSupervisorAccount color='#00B0FF' />
 const imgBaby1 = require('./images/baby1.jpg');
 const imgANR = require('./images/anr.jpg');
 const imgBaby2 = require('./images/baby2.jpg');
-const imgAnushka = require('./images/anushka.jpg');
-const imageName = require('./download.png');
-
-const style = {
-  maxHeight: 1000,
-  width: 290,
-  margin: '60px 80px 20px 20px',
-  textAlign: 'center',
-  position: 'static'
-};
 
 const div1Style = {
   paddingTop: 10,
@@ -51,11 +41,6 @@ const refreshBtnStyle = {
   fontSize: 16  ,
   color: '#00B0FF',
   cursor: 'pointer'
-}
-
-const listItemStyle = {
-  textAlign: 'left',
-  color: '#03A9F4'
 }
 
 const iconButtonElement = (
@@ -100,7 +85,7 @@ export default class WhoToFollow extends React.Component {
   }
   render() {
     return(
-      <Paper style={style} zDepth={1}>
+      <Paper style={this.props.style} zDepth={1}>
         <div style={div1Style}>
           <h3 style={headStyle}>Who to follow</h3>
           <span style={span1Style}>.</span>

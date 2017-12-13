@@ -2,7 +2,6 @@ import React from 'react';
 import Paper from 'material-ui/Paper';
 import FlatButton from 'material-ui/FlatButton';
 import AvatarImage from './avatarimage';
-import TextField from 'material-ui/TextField';
 import MainContent from './maincontent';
 import TrendsForYou from './trendsforyou';
 import WhoToFollow from './whotofollow';
@@ -46,12 +45,21 @@ const fullBtnStyle = {
   position: 'static',
 }
 
-const textStyle = {
-  marginLeft: 5,
-  backgroundColor: 'white',
-  borderRadius: 5,
+const whoStyle = {
+  maxHeight: 1000,
+  width: 290,
+  margin: '60px 80px 20px 20px',
+  textAlign: 'center',
+  position: 'static'
+};
 
-}
+const dashStyle = {
+  height: 250,
+  width: 290,
+  margin: '60px 20px 20px 80px',
+  textAlign: 'center',
+};
+
 export default class MainArea extends React.Component {
   constructor(props) {
     super(props);
@@ -70,11 +78,11 @@ export default class MainArea extends React.Component {
     return(
       <div style={divStyle}>
         <div>
-          <DashBoard />
+          <DashBoard name='Manjusha Z' hashTag='@ManjuZM' style={dashStyle}/>
           <TrendsForYou />
         </div>
-        <Paper style={box2Style} rounded='false' zDepth={1}>
-          <Paper style={comp2Style} rounded='false'>
+        <Paper style={box2Style} rounded={false} zDepth={1}>
+          <Paper style={comp2Style} rounded={false}>
             <div style={div2Style}>
               <AvatarImage size={40}/>
                 <SearchBar
@@ -103,7 +111,7 @@ export default class MainArea extends React.Component {
           <MainContent />
         </Paper>
         <div>
-           <WhoToFollow />
+           <WhoToFollow style={whoStyle}/>
            <FooterBox />
         </div>
 

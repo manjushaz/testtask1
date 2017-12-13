@@ -1,7 +1,6 @@
 import React from 'react';
 import FlatButton from 'material-ui/FlatButton';
 import MenuItem from 'material-ui/MenuItem';
-import DropDownMenu from 'material-ui/DropDownMenu';
 import {Toolbar, ToolbarGroup} from 'material-ui/Toolbar';
 import SearchBar from 'material-ui-search-bar'
 import ActionHome from 'material-ui/svg-icons/action/home';
@@ -11,15 +10,14 @@ import ActionAccountCircle from 'material-ui/svg-icons/action/account-circle';
 import Divider from 'material-ui/Divider';
 import IconMenu from 'material-ui/IconMenu';
 import IconButton from 'material-ui/IconButton';
+import MainArea from './mainarea';
+import SearchArea from './searcharea';
 
 const iconHome = <ActionHome />
 const iconNotification = <NotificationsIcon />
 const iconMessage = <CommunicationMailOutline />
 const iconAccount = <ActionAccountCircle color='#757575' />
 
-const dropDownIconStyle = {
-  Width: '50px'
-}
 const styles = {
     borderRadius: '30px',
     backgroundColor: '#2196F3',
@@ -33,26 +31,45 @@ const btnStyle = {
 const imageName = require('./twittericon.png')
 
 const style = {
+    top: 0,
+    left: 0,
+    zIndex: 9999,
     height: '50px',
     width: '100%',
+    margin: 0,
     backgroundColor: 'white',
     borderBottom  : '1px solid #BDBDBD',
     fontSize: '10px',
     boxShadow: '1px 1px #BDBDBD ',
     position: 'fixed'
 }
+
 export default class NavBarFixed extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       value: 3,
+      issearch: true
     };
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   handleChange = (event, index, value) => this.setState({value});
+  handleSearch(e) {
+      const newSearch = this.state.isSearch === false ? true : false;
+      this.setState({ isSearch: newSearch});
+  }
 
   render() {
+    const isSearch = this.state.isSearch;
+    let button = null;
+    if (isSearch) {
+      button = <SearchArea />;
+    } else {
+      button = <MainArea />;
+    }
     return (
+      <div>
       <Toolbar style={style}>
         <ToolbarGroup>
           <FlatButton label="Home" labelStyle={btnStyle} icon={iconHome} />
@@ -73,7 +90,7 @@ export default class NavBarFixed extends React.Component {
         <ToolbarGroup>
              <SearchBar
                onChange={() => console.log('onChange')}
-               onRequestSearch={() => console.log('onRequestSearch')}
+               onRequestSearch={this.handleSearch}
                style={{
                  marginLeft: 100,
                  maxWidth: 800,
@@ -102,11 +119,12 @@ export default class NavBarFixed extends React.Component {
                  <MenuItem value={11} primaryText="Logout" />
                  <Divider />
                  <MenuItem value={12} primaryText="Night Mode" />
-
               </IconMenu>
            </ToolbarGroup>
            <FlatButton label="Tweet" primary={true} style={styles} labelStyle={btnStyle} />
       </Toolbar>
+      {button}
+    </div>
     );
   }
 }

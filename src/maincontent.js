@@ -93,13 +93,13 @@ export default class MainContent extends React.Component {
   select = (index) => this.setState({selectedIndex: index});
   render() {
     return(
-      <Paper style={style} rounded='false' zDepth={1}>
+      <Paper style={style} rounded={false} zDepth={1}>
         <div style={div1Style}>
          <a href="#3" style={aStyle}>
            <img style={imgStyle}
              src={imageName} width='50px' height='50px' alt='avatar'/>
-           <span style={span1Style}><strong>Manjusha Z   </strong></span>
-           <span style={span2Style}>@ManjuZM</span>
+           <span style={span1Style}><strong>Jayaram J</strong></span>
+           <span style={span2Style}>@jjram</span>
            <span style={span2Style}>.40m</span>
          </a>
          <div style={div2Style}>
