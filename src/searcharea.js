@@ -40,6 +40,7 @@ const comp2Style = {
   marginLeft: 80,
   width: 290,
   height: 300,
+  backgroundColor: '#EFEBE9',
 }
 
 const comp3Style = {
@@ -47,6 +48,7 @@ const comp3Style = {
   marginLeft: 50,
   width: 590,
   height: 550,
+  backgroundColor: '#EFEBE9',
 }
 
 const listItemStyle = {
@@ -68,6 +70,7 @@ const comp4Style = {
   marginLeft: 50,
   width: 590,
   height: 40,
+  backgroundColor: '#EFEBE9',
 }
 const fullBtnStyle = {
   textTransform: 'none',
@@ -81,6 +84,7 @@ const dash1Style = {
   marginLeft: 50,
   marginBottom: 10,
   textAlign: 'center',
+  backgroundColor: '#EFEBE9',
 };
 
 const dash2Style = {
@@ -89,6 +93,7 @@ const dash2Style = {
   marginLeft: 10,
   marginBottom: 10,
   textAlign: 'center',
+  backgroundColor: '#EFEBE9',
 };
 
 const whoStyle = {
@@ -156,7 +161,8 @@ export default class SearchArea extends React.Component {
                  <div style={{
                    paddingTop: 10,
                    paddingLeft: 20,
-                   textAlign: 'left'
+                   textAlign: 'left',
+                   backgroundColor: '#EFEBE9'
                  }}>
                    <h3 style={{
                      marginTop: 10,
@@ -229,7 +235,7 @@ export default class SearchArea extends React.Component {
                 <FlatButton label="See new tweets"
                      labelStyle={fullBtnStyle}
                      fullWidth={true}
-                      style={{backgroundColor: 'white', position: 'static'}} />
+                      style={{backgroundColor: '#EFEBE9', position: 'static'}} />
               </Paper>
 
                 <div style={{

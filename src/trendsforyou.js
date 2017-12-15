@@ -7,6 +7,7 @@ const style = {
   width: 290,
   margin: '10px 10px 10px 80px',
   textAlign: 'center',
+  backgroundColor: '#EFEBE9',
 };
 
 const div1Style = {

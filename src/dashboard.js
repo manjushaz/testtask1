@@ -1,13 +1,15 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
-import ContentAdd from 'material-ui/svg-icons/content/add';
+
+const imageProfile= require('./images/profile.png');
 
 const comp1Style = {
   height: 100,
   width: '100%',
   margin: 0,
   backgroundColor: '#2196F3',
+  backgroundImage: 'linear-gradient(to right, #673AB7, #9C27B0 50%, #E91E63)',
   textAlign: 'center',
   display: 'inline-block',
 };
@@ -90,7 +92,7 @@ export default class DashBoard extends React.Component {
             <FloatingActionButton
                 style={profileBtnStyle}
                 backgroundColor='#2196F3'>
-              <ContentAdd />
+                <img src={imageProfile} width='50px' height='50px' alt='avatar'/>
             </FloatingActionButton>
          </Paper>
          <a href='#1' id='name'
@@ -112,7 +114,7 @@ export default class DashBoard extends React.Component {
             <li style={liStyle}>
                <a href='#2' style={liaStyle}>
                  <span style={span1Style}>Tweets</span>
-                 <span style={span2Style}>0</span>
+                 <span style={span2Style}>2</span>
                </a>
             </li>
             <li style={liStyle}>

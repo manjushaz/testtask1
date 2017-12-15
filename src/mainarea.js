@@ -34,7 +34,7 @@ const comp2Style = {
   height: 70,
   width: '100%',
   margin: 0,
-  backgroundColor: '#E1F5FE',
+  backgroundColor: '#D7CCC8',
   textAlign: 'center',
   display: 'inline-block',
 };
@@ -58,6 +58,7 @@ const dashStyle = {
   width: 290,
   margin: '60px 20px 20px 80px',
   textAlign: 'center',
+  backgroundColor: '#EFEBE9',
 };
 
 export default class MainArea extends React.Component {
@@ -103,7 +104,8 @@ export default class MainArea extends React.Component {
           <FlatButton label="See new tweets"
                labelStyle={fullBtnStyle}
                fullWidth={true}
-                style={{backgroundColor: 'white', position: 'static'}} />
+                style={{  backgroundColor: '#EFEBE9',
+                   position: 'static'}} />
 
           <MainContent />
           <MainContent />

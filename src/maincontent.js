@@ -27,7 +27,7 @@ const style = {
   margin: 0,
   textAlign: 'center',
   display: 'inline-block',
-
+  backgroundColor: '#EFEBE9',
 };
 
 const displayImageStyle = {
@@ -131,25 +131,25 @@ export default class MainContent extends React.Component {
                label="20"
                icon={iconComment}
                onClick={() => this.select(0)}
-               style={{position:'static'}}
+               style={{position:'static', backgroundColor: '#EFEBE9'}}
             />
             <BottomNavigationItem
               label="12"
               icon={iconLike}
               onClick={() => this.select(1)}
-              style={{position:'static'}}
+              style={{position:'static', backgroundColor: '#EFEBE9'}}
             />
             <BottomNavigationItem
               label="24"
               icon={iconFavorite}
               onClick={() => this.select(2)}
-              style={{position:'static'}}
+              style={{position:'static', backgroundColor: '#EFEBE9'}}
             />
             <BottomNavigationItem
               label=""
               icon={iconMessage}
               onClick={() => this.select(3)}
-              style={{position:'static'}}
+              style={{position:'static', backgroundColor: '#EFEBE9'}}
             />
           </BottomNavigation>
         </Paper>

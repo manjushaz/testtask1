@@ -20,7 +20,8 @@ const imgBaby2 = require('./images/baby2.jpg');
 const div1Style = {
   paddingTop: 10,
   paddingLeft: 20,
-  textAlign: 'left'
+  textAlign: 'left',
+  backgroundColor: '#EFEBE9'
 }
 
 const headStyle = {
@@ -37,7 +38,7 @@ const span1Style = {
 
 const refreshBtnStyle = {
   border: '0px solid',
-  backgroundColor: 'white',
+  backgroundColor: '#EFEBE9',
   fontSize: 16  ,
   color: '#00B0FF',
   cursor: 'pointer'
@@ -64,6 +65,7 @@ const rightIconMenu = (
 const btnLabelStyle = {
   textTransform: 'none',
   color: '#00B0FF',
+  backgroundColor: '#EFEBE9',
 }
 
 const underline = 'underline';
@@ -97,7 +99,7 @@ export default class WhoToFollow extends React.Component {
           onMouseOut={this.handleMouseOut}><small>View all</small></a>
         </div>
         <div>
-          <List style={{position: 'static'}}>
+          <List style={{position: 'static', backgroundColor: '#EFEBE9'}}>
             <ListItem
               leftAvatar={<Avatar src={imgANR} />}
               rightIconButton={iconButtonElement}
@@ -113,15 +115,15 @@ export default class WhoToFollow extends React.Component {
                       height: 30,
                       backgroundColor: 'white',
                       border: '2px solid #0288D1',
-                      color: '#0288D1',
+                      color: 'white',
                       cursor: 'pointer',
-
+                      backgroundImage: 'linear-gradient(to right, #673AB7, #9C27B0 50%, #E91E63)',
                     }}>
                     Follow
                   </button>
                 </p>
               }
-              hoverColor='white'
+              hoverColor='#EFEBE9'
               style={{cursor: 'auto', position: 'staric'}}
               secondaryTextLines={2}
             />
@@ -141,13 +143,14 @@ export default class WhoToFollow extends React.Component {
                       height: 30,
                       backgroundColor: 'white',
                       border: '2px solid #0288D1',
-                      color: '#0288D1'
+                      color: 'white',
+                      backgroundImage: 'linear-gradient(to right, #673AB7, #9C27B0 50%, #E91E63)',
                     }}>
                     Follow
                   </button>
                 </p>
               }
-              hoverColor='white'
+              hoverColor='#EFEBE9'
               secondaryTextLines={2}
             />
             <Divider />
@@ -166,19 +169,21 @@ export default class WhoToFollow extends React.Component {
                       height: 30,
                       backgroundColor: 'white',
                       border: '2px solid #0288D1',
-                      color: '#0288D1'
+                      color: 'white',
+                      backgroundImage: 'linear-gradient(to right, #673AB7, #9C27B0 50%, #E91E63)',
                     }}>
                     Follow
                   </button>
                 </p>
               }
-              hoverColor='white'
+              hoverColor='#EFEBE9'
               secondaryTextLines={2}
             />
           </List>
         </div>
         <Divider />
         <FlatButton labelStyle={btnLabelStyle}
+          style={{backgroundColor: '#EFEBE9'}}
           label="Find people you know"
           fullWidth={true}
           hoverColor='white'

@@ -22,6 +22,7 @@ const styles = {
     borderRadius: '30px',
     backgroundColor: '#2196F3',
     color: 'white',
+    backgroundImage: 'linear-gradient(to right, #673AB7, #9C27B0 50%, #E91E63)',
     marginTop: 5
 }
 const btnStyle = {
@@ -37,11 +38,11 @@ const style = {
     height: '50px',
     width: '100%',
     margin: 0,
-    backgroundColor: 'white',
+    backgroundColor: '#EFEBE9',
     borderBottom  : '1px solid #BDBDBD',
     fontSize: '10px',
     boxShadow: '1px 1px #BDBDBD ',
-    position: 'fixed'
+    position: 'fixed',
 }
 
 export default class NavBarFixed extends React.Component {

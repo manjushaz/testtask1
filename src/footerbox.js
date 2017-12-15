@@ -10,6 +10,7 @@ const style = {
   width: 290,
   margin: '50px 80px 20px 20px',
   textAlign: 'left',
+  backgroundColor: '#EFEBE9'
 };
 
 const divStyle = {
